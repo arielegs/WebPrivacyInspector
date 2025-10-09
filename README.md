@@ -51,7 +51,3 @@ The project also includes the following guides:
 *   **Privacy Recommendations:** Provides general privacy recommendations.
 *   **Privacy Tricks:** Provides advanced privacy-enhancing tricks.
 *   **System Recommendations:** Recommends privacy-focused operating systems and system configurations.
-
-## Contributing
-
-Contributions are welcome! Please feel free to open an issue or submit a pull request.
