@@ -2,15 +2,35 @@
 
 The Web Privacy Inspector is a tool to help you understand what information your browser is revealing about you. It includes a series of tests to check for common privacy-related issues, as well as a set of guides to help you improve your online privacy.
 
+## Requirements
+
+The project is a PHP-based site and requires PHP to run. Recommended minimums:
+
+* PHP 7.4 or newer (PHP 8.0+ recommended)
+* (Optional) Composer if you want to manage PHP dependencies
+
+Quick install notes:
+
+* macOS (Homebrew): `brew install php`
+* Ubuntu/Debian: `sudo apt update && sudo apt install php`
+
+If you prefer not to install PHP system-wide, see the Docker example in "Running the project" to start the app in a container.
+
 ## Running the project
 
-To run the project locally, you will need to have PHP installed. Then, you can run the following command in your terminal:
+See the "Requirements" section above for the PHP requirement. To run the project locally using PHP's built-in web server, run the following command in your terminal from the project root:
 
 ```bash
 php -S localhost:8000
 ```
 
 You can then access the project in your browser at `http://localhost:8000`.
+
+Alternatively you can run the project in a container (useful if you don't want to install PHP locally):
+
+```bash
+docker run --rm -v "$PWD":/var/www/html -p 8000:80 php:8.1-apache
+```
 
 ## Features
 
