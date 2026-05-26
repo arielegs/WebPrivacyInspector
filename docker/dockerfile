@@ -1,0 +1,18 @@
+# Use official PHP image with Apache pre-configured
+FROM php:8.2-apache
+
+# Install git to clone the repo
+RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /var/www/html
+
+# Clone the project directly into Apache's public folder
+RUN git clone https://github.com/arielegs/WebPrivacyInspector.git .
+
+# Expose port 80 (Apache default)
+EXPOSE 80
+
+# Apache runs automatically by default in this image
+# No CMD needed, but we ensure permissions are correct
+RUN chown -R www-data:www-data /var/www/html   
